@@ -1,0 +1,16 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "built": "npx tailwindcss -i ./src/input.css -o ./dist/CSS/style.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/CSS/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
