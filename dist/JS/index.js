@@ -11,7 +11,6 @@ form.onsubmit = (event) => {
     fetch(API_URL)
     .then(data => data.json())
     .then(data => {
-      console.log(data);
       showData(data);
     })
   }
@@ -20,12 +19,6 @@ form.onsubmit = (event) => {
 function showData(data) {
   const container = document.querySelector("main");
   let main = document.querySelector("#main");
-  // const showCityName = document.querySelector("#cityName");
-  // const showCityTemp = document.querySelector("#temp");
-  // const showCityStatus = document.querySelector("#status");
-  // const showCityWindSpeed = document.querySelector("#windSpeed");
-  // const showCityHumidity = document.querySelector("#humidity");
-  // const showCityCloudy = document.querySelector("#cloudy");
   let cityName = `${data.location.name} / ${data.location.country}`;
   let date = new Date();
   let cityTemp = Math.floor(parseInt(data.current.temp_c));
@@ -61,12 +54,6 @@ function showData(data) {
       </div>
     </div>
   `
-  // showCityName.innerHTML = cityName;
-  // showCityTemp.innerHTML = `${cityTemp}°`;
-  // showCityStatus.src = `${cityStatus}`;
-  // showCityWindSpeed.innerHTML = `${cityWindSpeed} <span class="text-base font-normal">mph</span>`;
-  // showCityHumidity.innerHTML = `${cityHumidity}<span class="text-base font-normal">%</span>`;
-  // showCityCloudy.innerHTML = cityCloudy;
   container.appendChild(main);
 }
 
